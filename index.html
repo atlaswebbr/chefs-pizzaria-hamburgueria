@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chef's Pizzaria &amp; Hamburgueria | Delivery &amp; Presencial em Alagoinhas</title>
+  <meta name="description" content="Pizzas artesanais, hambúrgueres suculentos, combos e drinks gelados em Alagoinhas - BA. Peça direto pelo WhatsApp sem taxas de aplicativos!" />
+  <link rel="icon" type="image/jpeg" href="logo-chefs.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #090b10;
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 80% 15%, rgba(14, 165, 233, 0.22), transparent 45%),
+                  radial-gradient(circle at 15% 75%, rgba(239, 68, 68, 0.16), transparent 50%),
+                  linear-gradient(180deg, #0d121d 0%, #090b10 100%);
+    }
+  </style>
+</head>
+<body class="text-slate-100 antialiased selection:bg-sky-400 selection:text-slate-950">
+
+  <script>
+    const CHEFS_CONFIG = {
+      nome: "Chef's Pizzaria & Hamburgueria",
+      whatsapp: "5575988056878",
+      instagram: "https://www.instagram.com/chefsoficiall/"
+    };
+  </script>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-[#090b10]/90 backdrop-blur-xl border-b border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#topo" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-full overflow-hidden bg-sky-500 border-2 border-sky-400 shadow-md shrink-0">
+          <img
+            src="logo-chefs.jpg"
+            alt="Chef's Pizzaria e Hamburgueria"
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="hidden w-full h-full items-center justify-center bg-sky-600 text-white font-extrabold text-xs">🍔🍕</div>
+        </div>
+        <div>
+          <span class="block font-extrabold text-sm sm:text-base text-white leading-tight">Chef's</span>
+          <span class="block text-[11px] font-semibold text-sky-400">Pizzaria &amp; Hamburgueria</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-300">
+        <a href="#combos" class="hover:text-sky-400 transition">Combos</a>
+        <a href="#cardapio" class="hover:text-sky-400 transition">Cardápio</a>
+        <a href="#delivery" class="hover:text-sky-400 transition">Delivery &amp; Salão</a>
+      </nav>
+
+      <button onclick="abrirSacola()"
+        class="relative bg-gradient-to-r from-sky-400 to-blue-600 hover:from-sky-300 hover:to-blue-500 text-slate-950 text-xs font-extrabold px-4 py-2.5 rounded-full shadow-lg shadow-sky-500/20 transition cursor-pointer flex items-center gap-1.5">
+        <span>🛒 Pedido</span>
+        <span id="badgeSacola" class="bg-slate-950 text-sky-300 text-[11px] font-extrabold px-2 py-0.5 rounded-full">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="topo" class="hero-glow pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 border-b border-slate-800/80">
+    <div class="max-w-5xl mx-auto text-center space-y-5">
+      <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-extrabold px-4 py-1.5 rounded-full">
+        <span>🏆 Eleita o Melhor Delivery de Alagoinhas</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+        Pizza gigante ou <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">burguer artesanal</span> do jeito que você merece.
+      </h1>
+
+      <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        Monte seu pedido em segundos com combos especiais, pizzas recheadas, hambúrgueres na brasa e drinks gelados — direto no WhatsApp, sem taxas extras.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+        <a href="#combos"
+          class="w-full sm:w-auto bg-gradient-to-r from-red-600 to-rose-500 hover:from-red-500 hover:to-rose-400 text-white font-extrabold text-sm px-7 py-4 rounded-2xl shadow-lg shadow-red-600/25 transition">
+          🔥 Ver Combos em Destaque
+        </a>
+        <a href="#cardapio"
+          class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold text-sm px-7 py-4 rounded-2xl transition">
+          Explorar Cardápio Completo ↓
+        </a>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3 max-w-lg mx-auto pt-4">
+        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-3">
+          <p class="text-base sm:text-xl font-extrabold text-sky-400">27,5 mil+</p>
+          <p class="text-[11px] text-slate-400">Fãs no Instagram</p>
+        </div>
+        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-3">
+          <p class="text-base sm:text-xl font-extrabold text-white">Rápido</p>
+          <p class="text-[11px] text-slate-400">Entrega na cidade</p>
+        </div>
+        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-3">
+          <p class="text-base sm:text-xl font-extrabold text-red-400">Salão</p>
+          <p class="text-[11px] text-slate-400">&amp; Delivery</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combos em Destaque -->
+  <section id="combos" class="py-14 px-4 max-w-5xl mx-auto">
+    <div class="flex items-end justify-between mb-7">
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-widest text-red-400">Campeões de Pedido</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Combos do Chef's</h2>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5">
+      <div class="bg-gradient-to-br from-slate-900 via-[#101829] to-red-950/30 border border-red-500/40 rounded-3xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="bg-red-600 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">Mais Pedido</span>
+            <span class="text-xl font-extrabold text-amber-400">R$ 39,90</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-white">👑 Combo Chefinho</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+            1 Hambúrguer Artesanal suculento + Batata Frita crocante + 1 Refrigerante Lata gelado. Ideal para matar a fome com economia.
+          </p>
+        </div>
+        <button onclick="adicionarItem('Combo Chefinho (Burguer + Batata + Refri Lata)', 39.90)"
+          class="mt-5 w-full bg-red-600 hover:bg-red-500 text-white font-extrabold text-xs py-3.5 rounded-xl transition cursor-pointer">
+          + Adicionar Combo Chefinho
+        </button>
+      </div>
+
+      <div class="bg-gradient-to-br from-slate-900 via-[#0e192d] to-sky-950/30 border border-sky-500/40 rounded-3xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between gap-2 mb-3">
+            <span class="bg-sky-500 text-slate-950 text-[11px] font-extrabold uppercase px-3 py-1 rounded-full">Para Galera</span>
+            <span class="text-xl font-extrabold text-sky-400">R$ 69,90</span>
+          </div>
+          <h3 class="text-xl font-extrabold text-white">🍕 Combo Pizza Grande + Refri 2L</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+            1 Pizza Grande (8 fatias, até 2 sabores tradicionais ou especiais) + 1 Refrigerante 2 Litros bem gelado.
+          </p>
+        </div>
+        <button onclick="adicionarItem('Combo Pizza Grande (2 sabores) + Refri 2L', 69.90)"
+          class="mt-5 w-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold text-xs py-3.5 rounded-xl transition cursor-pointer">
+          + Adicionar Combo Pizza + 2L
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cardápio Completo -->
+  <section id="cardapio" class="py-12 px-4 max-w-5xl mx-auto">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-7">
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-widest text-sky-400">Cardápio Digital</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Escolha seu Pedido</h2>
+      </div>
+
+      <div class="flex flex-wrap gap-2">
+        <button onclick="filtrarMenu('todos', this)" class="menu-btn bg-sky-400 text-slate-950 text-xs font-extrabold px-4 py-2 rounded-full cursor-pointer">Todos</button>
+        <button onclick="filtrarMenu('pizzas', this)" class="menu-btn bg-slate-900 text-slate-300 border border-slate-800 text-xs font-semibold px-4 py-2 rounded-full cursor-pointer">🍕 Pizzas</button>
+        <button onclick="filtrarMenu('burguers', this)" class="menu-btn bg-slate-900 text-slate-300 border border-slate-800 text-xs font-semibold px-4 py-2 rounded-full cursor-pointer">🍔 Burguers</button>
+        <button onclick="filtrarMenu('drinks', this)" class="menu-btn bg-slate-900 text-slate-300 border border-slate-800 text-xs font-semibold px-4 py-2 rounded-full cursor-pointer">🍹 Drinks &amp; Bebidas</button>
+      </div>
+    </div>
+
+    <div id="gridCardapio" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </section>
+
+  <!-- Presencial & Delivery -->
+  <section id="delivery" class="py-14 px-4 max-w-5xl mx-auto">
+    <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-2">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-sky-400">Atendimento Completo</span>
+        <h2 class="text-2xl font-extrabold text-white">Peça em casa ou venha curtir no salão</h2>
+        <p class="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed">
+          Entregamos quentinho em toda Alagoinhas com taxa acessível e também recebemos você e sua galera no nosso espaço presencial com drinks preparados na hora.
+        </p>
+      </div>
+      <a href="https://wa.me/5575988056878?text=Ol%C3%A1%20Chef's!%20Quero%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer"
+        class="shrink-0 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs sm:text-sm px-6 py-4 rounded-2xl transition">
+        Chamar no WhatsApp (75) 98805-6878
+      </a>
+    </div>
+  </section>
+
+  <!-- Barra Flutuante da Sacola -->
+  <div id="barraFlutuante" class="hidden fixed bottom-4 inset-x-4 z-40 max-w-xl mx-auto">
+    <button onclick="abrirSacola()"
+      class="w-full bg-gradient-to-r from-sky-400 to-blue-600 text-slate-950 font-extrabold text-xs sm:text-sm px-5 py-4 rounded-2xl shadow-2xl shadow-sky-500/30 flex items-center justify-between cursor-pointer">
+      <span>🛒 Ver Sacola (<span id="qtdFlutuante">0</span> itens)</span>
+      <span id="totalFlutuante">R$ 0,00 →</span>
+    </button>
+  </div>
+
+  <!-- Modal da Sacola -->
+  <div id="modalSacola" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-end sm:items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-3xl w-full max-w-md p-6 space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h3 class="text-lg font-extrabold text-white">🛒 Seu Pedido no Chef's</h3>
+        <button onclick="fecharSacola()" class="text-slate-400 hover:text-white font-bold text-sm cursor-pointer">✕</button>
+      </div>
+
+      <div id="listaSacola" class="space-y-2 max-h-56 overflow-y-auto text-xs"></div>
+
+      <div class="space-y-2.5 pt-2 border-t border-slate-800">
+        <input id="clienteEndereco" type="text" placeholder="Seu bairro / endereço (ou digite: Retirada / Mesa)"
+          class="w-full rounded-xl bg-slate-950 border border-slate-700 px-3.5 py-2.5 text-xs text-white focus:border-sky-400 focus:outline-none" />
+        <select id="clientePagamento"
+          class="w-full rounded-xl bg-slate-950 border border-slate-700 px-3.5 py-2.5 text-xs text-white focus:border-sky-400 focus:outline-none">
+          <option value="Pix">Pagamento via Pix</option>
+          <option value="Cartão de Crédito / Débito">Cartão de Crédito / Débito</option>
+          <option value="Dinheiro">Dinheiro</option>
+        </select>
+      </div>
+
+      <div class="flex items-center justify-between pt-2">
+        <span class="text-xs text-slate-400 font-semibold">Subtotal dos itens:</span>
+        <span id="subtotalModal" class="text-lg font-extrabold text-sky-400">R$ 0,00</span>
+      </div>
+
+      <button onclick="finalizarWhats()"
+        class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm py-3.5 rounded-xl transition cursor-pointer">
+        Enviar Pedido no WhatsApp →
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-8 px-4 text-center text-xs text-slate-500">
+    <p><strong class="text-white">Chef's Pizzaria &amp; Hamburgueria</strong> • Alagoinhas - BA</p>
+    <p class="mt-1">Modelo demonstrativo desenvolvido por <a href="https://atlaswebbr.github.io/Atlas-web-Demostra-es/" target="_blank" class="text-sky-400 font-bold hover:underline">Atlas Web</a></p>
+  </footer>
+
+  <script>
+    const itensCardapio = [
+      { nome: "Pizza Calabresa Especial (Grande)", cat: "pizzas", tag: "Pizza 8 Fatias", desc: "Molho artesanal, mussarela derretida, calabresa fatiada, cebola e orégano.", preco: 48.00 },
+      { nome: "Pizza Frango com Catupiry & Cheddar", cat: "pizzas", tag: "Pizza 8 Fatias", desc: "Frango desfiado temperado, camada generosa de cheddar cremoso e mussarela.", preco: 54.00 },
+      { nome: "Pizza Carne do Sol na Nata (Grande)", cat: "pizzas", tag: "Especial da Casa", desc: "Carne do sol acebolada, mussarela, toque de nata e cheiro-verde.", preco: 58.00 },
+      { nome: "Chef's Bacon Duplo", cat: "burguers", tag: "Artesanal", desc: "Dois blends 140g na chapa, cheddar duplo, bacon crocante e molho especial da casa.", preco: 32.00 },
+      { nome: "Chef's Clássico Salad", cat: "burguers", tag: "Artesanal", desc: "Blend 150g suculento, queijo prato, alface americana, tomate e maionese temperada.", preco: 26.00 },
+      { nome: "Chef's Cheddar Melt", cat: "burguers", tag: "Artesanal", desc: "Pão brioche selado, hambúrguer 160g, piscina de cheddar cremoso e cebola caramelizada.", preco: 30.00 },
+      { nome: "Caipiroska / Drink da Casa", cat: "drinks", tag: "Bar & Drinks", desc: "Preparado na hora com frutas frescas e gelo cristalino (consulte sabores no WhatsApp).", preco: 18.00 },
+      { nome: "Coca-Cola 2 Litros", cat: "drinks", tag: "Bebida", desc: "Refrigerante Coca-Cola original 2L bem gelado.", preco: 14.00 },
+      { nome: "Refrigerante Lata 350ml", cat: "drinks", tag: "Bebida", desc: "Coca-Cola, Guaraná Antarctica ou Fanta gelada.", preco: 6.50 }
+    ];
+
+    let sacola = [];
+    let filtroAtual = "todos";
+
+    function formatarReal(valor) {
+      return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+    }
+
+    function renderCardapio() {
+      const grid = document.getElementById("gridCardapio");
+      const filtrados = filtroAtual === "todos" ? itensCardapio : itensCardapio.filter(i => i.cat === filtroAtual);
+      grid.innerHTML = filtrados.map(item => `
+        <article class="bg-slate-900/90 border border-slate-800 hover:border-sky-400/50 rounded-2xl p-5 flex flex-col justify-between transition">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2.5">
+              <span class="text-[11px] font-bold bg-sky-500/15 text-sky-300 px-2.5 py-1 rounded-full">${item.tag}</span>
+              <span class="text-base font-extrabold text-amber-400">${formatarReal(item.preco)}</span>
+            </div>
+            <h3 class="text-base font-extrabold text-white">${item.nome}</h3>
+            <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">${item.desc}</p>
+          </div>
+          <button onclick="adicionarItem('${item.nome.replace(/'/g, "\\'")}', ${item.preco})"
+            class="mt-4 w-full bg-slate-800 hover:bg-sky-400 hover:text-slate-950 text-sky-300 font-bold text-xs py-2.5 rounded-xl transition cursor-pointer">
+            + Adicionar ao Pedido
+          </button>
+        </article>
+      `).join("");
+    }
+
+    function filtrarMenu(cat, btn) {
+      filtroAtual = cat;
+      document.querySelectorAll(".menu-btn").forEach(b => {
+        b.className = "menu-btn bg-slate-900 text-slate-300 border border-slate-800 text-xs font-semibold px-4 py-2 rounded-full cursor-pointer";
+      });
+      btn.className = "menu-btn bg-sky-400 text-slate-950 text-xs font-extrabold px-4 py-2 rounded-full cursor-pointer";
+      renderCardapio();
+    }
+
+    function adicionarItem(nome, preco) {
+      const existente = sacola.find(i => i.nome === nome);
+      if (existente) {
+        existente.qtd++;
+      } else {
+        sacola.push({ nome, preco, qtd: 1 });
+      }
+      atualizarSacolaUI();
+    }
+
+    function alterarQtd(index, delta) {
+      sacola[index].qtd += delta;
+      if (sacola[index].qtd <= 0) sacola.splice(index, 1);
+      atualizarSacolaUI();
+    }
+
+    function atualizarSacolaUI() {
+      const totalQtd = sacola.reduce((acc, i) => acc + i.qtd, 0);
+      const totalValor = sacola.reduce((acc, i) => acc + i.preco * i.qtd, 0);
+
+      document.getElementById("badgeSacola").textContent = totalQtd;
+      document.getElementById("qtdFlutuante").textContent = totalQtd;
+      document.getElementById("totalFlutuante").textContent = formatarReal(totalValor) + " →";
+      document.getElementById("subtotalModal").textContent = formatarReal(totalValor);
+
+      const barra = document.getElementById("barraFlutuante");
+      if (totalQtd > 0) barra.classList.remove("hidden");
+      else barra.classList.add("hidden");
+
+      const lista = document.getElementById("listaSacola");
+      if (sacola.length === 0) {
+        lista.innerHTML = `<p class="text-slate-400 text-center py-6">Sua sacola está vazia. Escolha um combo, pizza ou burguer!</p>`;
+      } else {
+        lista.innerHTML = sacola.map((item, idx) => `
+          <div class="flex items-center justify-between bg-slate-950 border border-slate-800 rounded-xl p-3">
+            <div class="pr-2">
+              <p class="font-bold text-white">${item.nome}</p>
+              <p class="text-sky-400 font-semibold">${formatarReal(item.preco * item.qtd)}</p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <button onclick="alterarQtd(${idx}, -1)" class="w-7 h-7 rounded-lg bg-slate-800 text-white font-bold cursor-pointer">-</button>
+              <span class="font-extrabold text-white">${item.qtd}</span>
+              <button onclick="alterarQtd(${idx}, 1)" class="w-7 h-7 rounded-lg bg-sky-500 text-slate-950 font-bold cursor-pointer">+</button>
+            </div>
+          </div>
+        `).join("");
+      }
+    }
+
+    function abrirSacola() {
+      atualizarSacolaUI();
+      document.getElementById("modalSacola").classList.remove("hidden");
+    }
+
+    function fecharSacola() {
+      document.getElementById("modalSacola").classList.add("hidden");
+    }
+
+    function finalizarWhats() {
+      if (sacola.length === 0) {
+        alert("Adicione pelo menos um item antes de enviar!");
+        return;
+      }
+      const endereco = (document.getElementById("clienteEndereco").value || "A combinar").trim();
+      const pagamento = document.getElementById("clientePagamento").value;
+      const total = sacola.reduce((acc, i) => acc + i.preco * i.qtd, 0);
+
+      const linhas = sacola.map(i => `• ${i.qtd}x ${i.nome} (${formatarReal(i.preco * i.qtd)})`).join("\n");
+      const msg = `Olá Chef's! Gostaria de fazer o seguinte pedido:\n\n${linhas}\n\n*Total estimado:* ${formatarReal(total)}\n*Entrega/Retirada:* ${endereco}\n*Pagamento:* ${pagamento}`;
+
+      window.open("https://wa.me/" + CHEFS_CONFIG.whatsapp + "?text=" + encodeURIComponent(msg), "_blank", "noopener,noreferrer");
+    }
+
+    renderCardapio();
+  </script>
+</body>
+</html>
